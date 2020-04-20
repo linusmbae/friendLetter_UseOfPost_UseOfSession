@@ -1,0 +1,17 @@
+{{#partial "title"}}
+    Welcome {{username}}
+{{/partial}}
+{{#partial "content"}}
+    {{#if username}}
+        Welcome {{username}}
+        {{else}}
+        <form action="/welcomeData" method="post">
+            <div class="form-group">
+                <input type="text" id="username" name="username" class="form-control" placeholder="UserName">
+            </div>
+            <button class="btn btn-primary" type="submit">Fire</button>
+        </form>
+    {{/if}}
+    <a href='/'><button class="btn btn-success"> home</button></a>
+{{/partial}}
+{{>layout.hbs}}
